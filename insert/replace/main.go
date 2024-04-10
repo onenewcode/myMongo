@@ -40,6 +40,7 @@ func main() {
 	}()
 
 	coll := client.Database("sample_restaurants").Collection("restaurants")
+	// 生成过滤器
 	filter := bson.D{{"name", "Madame Vo"}}
 
 	replacement := Restaurant{Name: "Monsieur Vo", Cuisine: "Asian Fusion"}
